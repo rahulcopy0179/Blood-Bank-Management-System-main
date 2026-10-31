@@ -108,6 +108,39 @@
       .nav-link:hover::after{
         transform: scalex(1);
       }
+
+      .compatibility-section {
+        margin: 36px auto;
+        padding: 24px;
+        max-width: 1140px;
+        background: #fff;
+        border-radius: 12px;
+      }
+      .compatibility-section h2 { color: #8b0000; }
+      .compatibility-scroller {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+        padding: 8px 2px 18px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+      .compatibility-card {
+        flex: 0 0 250px;
+        scroll-snap-align: start;
+        border: 1px solid #eadada;
+        border-top: 5px solid #b21f2d;
+        border-radius: 10px;
+        padding: 18px;
+        background: #fffafa;
+      }
+      .compatibility-card h3 { color: #9d1826; font-size: 1.6rem; }
+      .compatibility-card p { margin-bottom: 8px; }
+      .compatibility-hint { color: #555; }
+      @media (max-width: 576px) {
+        .compatibility-section { margin: 24px 12px; padding: 18px; }
+        .compatibility-card { flex-basis: 220px; }
+      }
     </style>
 
   </head>
@@ -143,6 +176,53 @@
     <span class="carousel-control-prev-icon"></span>
   </a>
       </div>
+      <section class="compatibility-section" aria-labelledby="compatibility-title">
+        <h2 id="compatibility-title" class="text-center">Blood type donation guide</h2>
+        <p class="text-center compatibility-hint">Scroll horizontally through all eight blood types to see who can receive red blood cells from each donor type.</p>
+        <div class="compatibility-scroller" tabindex="0" aria-label="Scrollable blood type donation guide">
+          <article class="compatibility-card">
+            <h3>O− donor</h3>
+            <p><strong>Can donate to:</strong> O−, O+, A−, A+, B−, B+, AB−, AB+</p>
+            <p><strong>Can receive from:</strong> O−</p>
+          </article>
+          <article class="compatibility-card">
+            <h3>O+ donor</h3>
+            <p><strong>Can donate to:</strong> O+, A+, B+, AB+</p>
+            <p><strong>Can receive from:</strong> O−, O+</p>
+          </article>
+          <article class="compatibility-card">
+            <h3>A− donor</h3>
+            <p><strong>Can donate to:</strong> A−, A+, AB−, AB+</p>
+            <p><strong>Can receive from:</strong> O−, A−</p>
+          </article>
+          <article class="compatibility-card">
+            <h3>A+ donor</h3>
+            <p><strong>Can donate to:</strong> A+, AB+</p>
+            <p><strong>Can receive from:</strong> O−, O+, A−, A+</p>
+          </article>
+          <article class="compatibility-card">
+            <h3>B− donor</h3>
+            <p><strong>Can donate to:</strong> B−, B+, AB−, AB+</p>
+            <p><strong>Can receive from:</strong> O−, B−</p>
+          </article>
+          <article class="compatibility-card">
+            <h3>B+ donor</h3>
+            <p><strong>Can donate to:</strong> B+, AB+</p>
+            <p><strong>Can receive from:</strong> O−, O+, B−, B+</p>
+          </article>
+          <article class="compatibility-card">
+            <h3>AB− donor</h3>
+            <p><strong>Can donate to:</strong> AB−, AB+</p>
+            <p><strong>Can receive from:</strong> O−, A−, B−, AB−</p>
+          </article>
+          <article class="compatibility-card">
+            <h3>AB+ donor</h3>
+            <p><strong>Can donate to:</strong> AB+</p>
+            <p><strong>Can receive from:</strong> all eight blood types</p>
+          </article>
+        </div>
+        <p class="small text-muted mb-0">Compatibility shown is for red blood cell transfusions. Hospitals confirm compatibility before transfusion.</p>
+      </section>
       <div class="container">
       <nav class="navbar">
         <div class="hamburger-menu">
