@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "sql205.infinityfree.com";
+$username = "if0_43318347";
+$password = "RaHul2k6";
 $dbname = "bloodbank";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if(!$conn){
